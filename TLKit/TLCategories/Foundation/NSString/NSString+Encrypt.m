@@ -28,6 +28,21 @@
     return decryptedString;
 }
 
+- (NSString*)encryptedWithAESUsingByteKey:(nullable const void *)byteKey andIV:(NSData*)iv
+{
+    NSData *encrypted = [[self dataUsingEncoding:NSUTF8StringEncoding] encryptedWithAESUsingByteKey:byteKey andIV:iv];
+    NSString *encryptedString = [encrypted base64EncodedString];
+    
+    return encryptedString;
+}
+
+- (NSString*)decryptedWithAESUsingByteKey:(nullable const void *)byteKey andIV:(NSData*)iv
+{
+    NSData *decrypted = [[NSData dataWithBase64EncodedString:self] decryptedWithAESUsingByteKey:byteKey andIV:iv];
+    NSString *decryptedString = [[NSString alloc] initWithData:decrypted encoding:NSUTF8StringEncoding];
+    
+    return decryptedString;
+}
 - (NSString*)encryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv
 {
     NSData *encrypted = [[self dataUsingEncoding:NSUTF8StringEncoding] encryptedWithDESUsingKey:key andIV:iv];

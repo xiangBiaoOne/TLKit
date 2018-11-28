@@ -29,6 +29,22 @@
  */
 - (NSData *)decryptedWithAESUsingKey:(NSString*)key andIV:(NSData *)iv;
 
+/**
+ *  利用AES加密数据
+ *
+ *  @param byteKey byteKey 字节数组
+ *  @param iv  iv description
+ */
+- (NSData *)encryptedWithAESUsingByteKey:(nullable const void *)byteKey andIV:(NSData *)iv;
+
+/**
+ *  @brief  利用AES解密数据
+ *
+ *  @param byteKey byteKey 字节数组
+ *  @param iv  iv
+ */
+- (NSData *)decryptedWithAESUsingByteKey:(nullable const void *)byteKey andIV:(NSData *)iv;
+
 #pragma mark - DES
 /**
  *  利用DES加密数据
@@ -44,6 +60,21 @@
  *  @param iv  iv
  */
 - (NSData *)decryptedWithDESUsingKey:(NSString*)key andIV:(NSData *)iv;
+
+/**
+ *  利用DES加密数据
+ *
+ *  @param byteKey byteKey 字节数组
+ *  @param iv  iv description
+ */
+- (NSData *)encryptedWithDESUsingByteKey:(NSString*)byteKey andIV:(NSData *)iv;
+/**
+ *  @brief   利用DES解密数据
+ *
+ *  @param byteKey byteKey 字节数组
+ *  @param iv  iv
+ */
+- (NSData *)decryptedWithDESUsingByteKey:(NSString*)byteKey andIV:(NSData *)iv;
 
 #pragma mark - 3DES
 /**

@@ -27,6 +27,23 @@
  */
 - (NSString*)decryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv;
 
+/**
+ *  AES加密数据
+ *
+ *  @param byteKey  byteKey 字节数组
+ *  @param iv  iv
+ */
+- (NSString*)encryptedWithAESUsingByteKey:(nullable const void *)byteKey andIV:(NSData*)iv;
+
+/**
+ *  AES解密数据
+ *
+ *  @param byteKey byteKey 字节数组
+ *  @param iv  iv
+ */
+- (NSString*)decryptedWithAESUsingByteKey:(nullable const void *)byteKey andIV:(NSData*)iv;
+
+
 #pragma mark - # DES
 /**
  *  DES加密数据

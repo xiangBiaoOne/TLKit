@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NSString+Encrypt.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSDictionary *dic = @{ @"Phone" : @"18680083268",
+                           @"CustomerID" : @"3174",
+                           @"PhoneMac" : @"99000905074633" };
+    Byte byteData[32] = {0x61, 0x72, 0x67, 0x66, 0x5e, 0x6b, 0x61, 0x6c,
+        0x6b, 0x64, 0x5c, 0x59, 0x65, 0x68, 0x59, 0x51, 0x5f, 0x57, 0x65, 0x51, 0x5e, 0x57,
+        0x4a, 0x38, 0x45, 0x3b, 0x31, 0x3e, 0x37, 0x34, 0x39, 0x2e};
+    NSString *argument = [NSString stringWithFormat:@"%@", [self jsonStringEncoded:dic]];
+    argument = [argument encryptedWithAESUsingByteKey:byteData andIV:nil];
+    NSLog(@"argument: %@",argument);
+
     return YES;
+}
+
+- (NSString *)jsonStringEncoded:(NSDictionary *)dic {
+    if ([NSJSONSerialization isValidJSONObject:dic]) {
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:0 error:&error];
+        NSString *json = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        if (!error) return json;
+    }
+    return nil;
 }
 
 

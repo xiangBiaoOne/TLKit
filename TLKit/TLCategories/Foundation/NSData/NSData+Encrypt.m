@@ -73,6 +73,16 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NSMuta
     return [self CCCryptData:self algorithm:kCCAlgorithmAES128 operation:kCCDecrypt key:key iv:iv];
 }
 
+- (NSData *)encryptedWithAESUsingByteKey:(nullable const void *)byteKey andIV:(NSData *)iv
+{
+    return [self CCCryptData:self algorithm:kCCAlgorithmAES128 operation:kCCEncrypt byteKey:byteKey iv:iv];
+}
+
+- (NSData *)decryptedWithAESUsingByteKey:(nullable const void *)byteKey andIV:(NSData *)iv
+{
+    return [self CCCryptData:self algorithm:kCCAlgorithmAES128 operation:kCCDecrypt byteKey:byteKey iv:iv];
+}
+
 #pragma mark - # 3DES
 - (NSData*)encryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv
 {
@@ -128,6 +138,51 @@ static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NSMuta
                                      option,                        // Padding option for CBC Mode
                                      keyData.bytes,
                                      keyData.length,
+                                     iv.bytes,
+                                     data.bytes,
+                                     data.length,
+                                     decryptedData.mutableBytes,    // encrypted data out
+                                     decryptedData.length,
+                                     &dataMoved);                   // total data moved
+    
+    if (result == kCCSuccess) {
+        decryptedData.length = dataMoved;
+        return decryptedData;
+    }
+    return nil;
+}
+
+- (NSData *)CCCryptData:(NSData *)data algorithm:(CCAlgorithm)algorithm operation:(CCOperation)operation byteKey:(nullable const void *)byteKey iv:(NSData *)iv
+{
+    
+    size_t dataMoved;
+    
+    int size = 0;
+    if (algorithm == kCCAlgorithmAES128 ||algorithm == kCCAlgorithmAES) {
+        size = kCCBlockSizeAES128;
+    }
+    else if (algorithm == kCCAlgorithmDES) {
+        size = kCCBlockSizeDES;
+    }
+    else if (algorithm == kCCAlgorithm3DES) {
+        size = kCCBlockSize3DES;
+    }
+    if (algorithm == kCCAlgorithmCAST) {
+        size = kCCBlockSizeCAST;
+    }
+    
+    NSMutableData *decryptedData = [NSMutableData dataWithLength:data.length + size];
+    
+    int option = kCCOptionPKCS7Padding | kCCOptionECBMode;
+    if (iv) {
+        option = kCCOptionPKCS7Padding;
+    }
+//    FixKeyLengths(algorithm, keyData,ivData);
+    CCCryptorStatus result = CCCrypt(operation,                    // kCCEncrypt or kCCDecrypt
+                                     algorithm,
+                                     option,                        // Padding option for CBC Mode
+                                     byteKey,
+                                     32,
                                      iv.bytes,
                                      data.bytes,
                                      data.length,
