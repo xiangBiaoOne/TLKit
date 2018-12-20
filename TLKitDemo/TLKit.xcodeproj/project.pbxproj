@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D3CA9C8FAFBE4D6D58C7745 /* libPods-TLKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CACAACB4AC70F7C76D1AE0D /* libPods-TLKit.a */; };
+		729BB1D721CB3EFE005A8850 /* UIView+XBCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 729BB1D621CB3EFE005A8850 /* UIView+XBCategory.m */; };
 		C2581E731F66A71F0029C3F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2581E721F66A71F0029C3F4 /* main.m */; };
 		C2581E761F66A71F0029C3F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2581E751F66A71F0029C3F4 /* AppDelegate.m */; };
 		C2581E791F66A71F0029C3F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2581E781F66A71F0029C3F4 /* ViewController.m */; };
@@ -83,6 +84,8 @@
 
 /* Begin PBXFileReference section */
 		0CACAACB4AC70F7C76D1AE0D /* libPods-TLKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		729BB1D521CB3EFE005A8850 /* UIView+XBCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XBCategory.h"; sourceTree = "<group>"; };
+		729BB1D621CB3EFE005A8850 /* UIView+XBCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XBCategory.m"; sourceTree = "<group>"; };
 		A483A26DF3CFB297814A0E87 /* Pods-TLKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLKit/Pods-TLKit.release.xcconfig"; sourceTree = "<group>"; };
 		C2581E6E1F66A71F0029C3F4 /* TLKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2581E721F66A71F0029C3F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -650,6 +653,8 @@
 				C2C2C8DC1F67A4850030FD2A /* UIView+Screenshot.m */,
 				C2C2C8DF1F67A4850030FD2A /* UIView+TipView.h */,
 				C2C2C8E01F67A4850030FD2A /* UIView+TipView.m */,
+				729BB1D521CB3EFE005A8850 /* UIView+XBCategory.h */,
+				729BB1D621CB3EFE005A8850 /* UIView+XBCategory.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -879,6 +884,7 @@
 				C2C2C9381F67A6520030FD2A /* UINavigationItem+Fixed.m in Sources */,
 				C2C2C90B1F67A4850030FD2A /* UIButton+Extensions.m in Sources */,
 				C2C2C9221F67A4850030FD2A /* UIView+Extensions.m in Sources */,
+				729BB1D721CB3EFE005A8850 /* UIView+XBCategory.m in Sources */,
 				C2C2C91E1F67A4850030FD2A /* UITextField+Select.m in Sources */,
 				C2C2C9351F67A5210030FD2A /* NSData+Hash.m in Sources */,
 				C2C2C9271F67A4850030FD2A /* UIViewController+TipView.m in Sources */,

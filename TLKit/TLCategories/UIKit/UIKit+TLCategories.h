@@ -14,6 +14,7 @@
 #import "UIView+Extensions.h"                   // UIView 关于subView、所在VC、当前状态的拓展
 #import "UIView+Screenshot.h"                   // UIView 截屏
 #import "UIView+TipView.h"                      // UIView 错误提示View（无网、无数据等）
+#import "UIView+XBCategory.h"                   // 加载xib文件
 
 //MARK: UIControl
 #import "UIControl+ActionBlocks.h"              // UIColor 事件响应block
