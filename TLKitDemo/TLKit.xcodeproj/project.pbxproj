@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D3CA9C8FAFBE4D6D58C7745 /* libPods-TLKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CACAACB4AC70F7C76D1AE0D /* libPods-TLKit.a */; };
+		726F2FFF21D252DD00C1B530 /* UIButton+EdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 726F2FFE21D252DD00C1B530 /* UIButton+EdgeInsets.m */; };
 		729BB1D721CB3EFE005A8850 /* UIView+XBCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 729BB1D621CB3EFE005A8850 /* UIView+XBCategory.m */; };
 		C2581E731F66A71F0029C3F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2581E721F66A71F0029C3F4 /* main.m */; };
 		C2581E761F66A71F0029C3F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2581E751F66A71F0029C3F4 /* AppDelegate.m */; };
@@ -84,6 +85,8 @@
 
 /* Begin PBXFileReference section */
 		0CACAACB4AC70F7C76D1AE0D /* libPods-TLKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		726F2FFD21D252DD00C1B530 /* UIButton+EdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EdgeInsets.h"; sourceTree = "<group>"; };
+		726F2FFE21D252DD00C1B530 /* UIButton+EdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EdgeInsets.m"; sourceTree = "<group>"; };
 		729BB1D521CB3EFE005A8850 /* UIView+XBCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XBCategory.h"; sourceTree = "<group>"; };
 		729BB1D621CB3EFE005A8850 /* UIView+XBCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XBCategory.m"; sourceTree = "<group>"; };
 		A483A26DF3CFB297814A0E87 /* Pods-TLKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLKit/Pods-TLKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -536,6 +539,8 @@
 			children = (
 				C2C2C89A1F67A4850030FD2A /* UIButton+Extensions.h */,
 				C2C2C89B1F67A4850030FD2A /* UIButton+Extensions.m */,
+				726F2FFD21D252DD00C1B530 /* UIButton+EdgeInsets.h */,
+				726F2FFE21D252DD00C1B530 /* UIButton+EdgeInsets.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -923,6 +928,7 @@
 				C2C2C9091F67A4850030FD2A /* NSURL+Params.m in Sources */,
 				C2C2C91D1F67A4850030FD2A /* UITextField+LengthLimit.m in Sources */,
 				C2C2C9491F67B7F60030FD2A /* UIViewController+NavBar.m in Sources */,
+				726F2FFF21D252DD00C1B530 /* UIButton+EdgeInsets.m in Sources */,
 				C2C2C91C1F67A4850030FD2A /* UIScrollView+Pages.m in Sources */,
 				C2EAC3421F71189D00BA2ED3 /* UIAlertView+ActionBlocks.m in Sources */,
 				C2C2C9031F67A4850030FD2A /* NSString+NormalRegex.m in Sources */,

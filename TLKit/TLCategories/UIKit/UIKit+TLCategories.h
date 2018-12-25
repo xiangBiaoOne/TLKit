@@ -21,6 +21,7 @@
 
 //MARK: UIButton
 #import "UIButton+Extensions.h"                 // UIButton 设置背景色、图文混排
+#import "UIButton+EdgeInsets.h"
 
 //MAKR: UIImage
 #import "UIImage+Color.h"                       // UIImage 根据颜色初始化
