@@ -10,6 +10,7 @@
 		3D3CA9C8FAFBE4D6D58C7745 /* libPods-TLKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CACAACB4AC70F7C76D1AE0D /* libPods-TLKit.a */; };
 		726F2FFF21D252DD00C1B530 /* UIButton+EdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 726F2FFE21D252DD00C1B530 /* UIButton+EdgeInsets.m */; };
 		729BB1D721CB3EFE005A8850 /* UIView+XBCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 729BB1D621CB3EFE005A8850 /* UIView+XBCategory.m */; };
+		72C59BA221D7567D00006772 /* NSObject+EmptyStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C59BA121D7567D00006772 /* NSObject+EmptyStr.m */; };
 		C2581E731F66A71F0029C3F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2581E721F66A71F0029C3F4 /* main.m */; };
 		C2581E761F66A71F0029C3F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2581E751F66A71F0029C3F4 /* AppDelegate.m */; };
 		C2581E791F66A71F0029C3F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2581E781F66A71F0029C3F4 /* ViewController.m */; };
@@ -89,6 +90,8 @@
 		726F2FFE21D252DD00C1B530 /* UIButton+EdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EdgeInsets.m"; sourceTree = "<group>"; };
 		729BB1D521CB3EFE005A8850 /* UIView+XBCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XBCategory.h"; sourceTree = "<group>"; };
 		729BB1D621CB3EFE005A8850 /* UIView+XBCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XBCategory.m"; sourceTree = "<group>"; };
+		72C59BA021D7567D00006772 /* NSObject+EmptyStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+EmptyStr.h"; sourceTree = "<group>"; };
+		72C59BA121D7567D00006772 /* NSObject+EmptyStr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EmptyStr.m"; sourceTree = "<group>"; };
 		A483A26DF3CFB297814A0E87 /* Pods-TLKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLKit/Pods-TLKit.release.xcconfig"; sourceTree = "<group>"; };
 		C2581E6E1F66A71F0029C3F4 /* TLKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2581E721F66A71F0029C3F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -479,6 +482,8 @@
 				C2C2C88C1F67A4850030FD2A /* NSString+StringPages.m */,
 				C2C2C88D1F67A4850030FD2A /* NSString+URL.h */,
 				C2C2C88E1F67A4850030FD2A /* NSString+URL.m */,
+				72C59BA021D7567D00006772 /* NSObject+EmptyStr.h */,
+				72C59BA121D7567D00006772 /* NSObject+EmptyStr.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -951,6 +956,7 @@
 				C2C2C8FA1F67A4850030FD2A /* NSMutableDictionary+SafeAccess.m in Sources */,
 				C2C2C9071F67A4850030FD2A /* NSString+URL.m in Sources */,
 				C2DADD641F691EBC00120B7A /* TLActionSheet.m in Sources */,
+				72C59BA221D7567D00006772 /* NSObject+EmptyStr.m in Sources */,
 				C2C2C9241F67A4850030FD2A /* UIView+Screenshot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

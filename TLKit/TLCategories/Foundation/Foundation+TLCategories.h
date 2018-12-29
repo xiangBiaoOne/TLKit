@@ -25,6 +25,7 @@
 #import "NSString+Encrypt.h"                // NSString AES、Des等加解密
 #import "NSString+PinYin.h"                 // NSString 获取汉字拼音
 #import "NSString+StringPages.h"            // NSString 对字符串进行分页
+#import "NSObject+EmptyStr.h"               // NSString 对字符串进行判空
 
 //MARK: NSData
 #import "NSData+Base64.h"                   // NSData Base64编解码
