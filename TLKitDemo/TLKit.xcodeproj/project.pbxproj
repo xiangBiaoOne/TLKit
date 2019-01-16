@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D3CA9C8FAFBE4D6D58C7745 /* libPods-TLKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CACAACB4AC70F7C76D1AE0D /* libPods-TLKit.a */; };
 		726F2FFF21D252DD00C1B530 /* UIButton+EdgeInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 726F2FFE21D252DD00C1B530 /* UIButton+EdgeInsets.m */; };
+		728E37DF21EEF8E4007CDF52 /* NSObject+TimeFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E37DE21EEF8E4007CDF52 /* NSObject+TimeFormat.m */; };
 		729BB1D721CB3EFE005A8850 /* UIView+XBCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 729BB1D621CB3EFE005A8850 /* UIView+XBCategory.m */; };
 		72C59BA221D7567D00006772 /* NSObject+EmptyStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C59BA121D7567D00006772 /* NSObject+EmptyStr.m */; };
 		C2581E731F66A71F0029C3F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2581E721F66A71F0029C3F4 /* main.m */; };
@@ -88,6 +89,8 @@
 		0CACAACB4AC70F7C76D1AE0D /* libPods-TLKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		726F2FFD21D252DD00C1B530 /* UIButton+EdgeInsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EdgeInsets.h"; sourceTree = "<group>"; };
 		726F2FFE21D252DD00C1B530 /* UIButton+EdgeInsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EdgeInsets.m"; sourceTree = "<group>"; };
+		728E37DD21EEF8E4007CDF52 /* NSObject+TimeFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TimeFormat.h"; sourceTree = "<group>"; };
+		728E37DE21EEF8E4007CDF52 /* NSObject+TimeFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TimeFormat.m"; sourceTree = "<group>"; };
 		729BB1D521CB3EFE005A8850 /* UIView+XBCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XBCategory.h"; sourceTree = "<group>"; };
 		729BB1D621CB3EFE005A8850 /* UIView+XBCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XBCategory.m"; sourceTree = "<group>"; };
 		72C59BA021D7567D00006772 /* NSObject+EmptyStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+EmptyStr.h"; sourceTree = "<group>"; };
@@ -484,6 +487,8 @@
 				C2C2C88E1F67A4850030FD2A /* NSString+URL.m */,
 				72C59BA021D7567D00006772 /* NSObject+EmptyStr.h */,
 				72C59BA121D7567D00006772 /* NSObject+EmptyStr.m */,
+				728E37DD21EEF8E4007CDF52 /* NSObject+TimeFormat.h */,
+				728E37DE21EEF8E4007CDF52 /* NSObject+TimeFormat.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -910,6 +915,7 @@
 				C2C2C9321F67A5210030FD2A /* NSData+Base64.m in Sources */,
 				C2C2C8FB1F67A4850030FD2A /* NSNotificationCenter+MainThread.m in Sources */,
 				C2C2C90C1F67A4850030FD2A /* UICollectionViewCell+Extensions.m in Sources */,
+				728E37DF21EEF8E4007CDF52 /* NSObject+TimeFormat.m in Sources */,
 				C2C2C8FD1F67A4850030FD2A /* NSObject+KVOBlock.m in Sources */,
 				C2C2C9211F67A4850030FD2A /* UITextView+Select.m in Sources */,
 				C2C2C9331F67A5210030FD2A /* NSData+Encrypt.m in Sources */,
