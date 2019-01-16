@@ -10,6 +10,7 @@
 
 @implementation XBUtilityTool
 
+
 + (NSString *)xb_timeFormatChangeWithOriginISOTime:(NSString *)timeStr {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
