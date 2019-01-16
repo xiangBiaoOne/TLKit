@@ -12,5 +12,6 @@
 #import "TLActionSheet.h"
 //#import "TLBadge.h"
 #import "TLUIUtility.h"
+#import "XBUtilityTool.h"
 
 #endif /* TLFunctional_h */

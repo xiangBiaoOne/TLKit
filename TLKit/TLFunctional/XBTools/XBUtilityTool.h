@@ -1,5 +1,5 @@
 //
-//  NSObject+TimeFormat.h
+//  XBUtilityTool.h
 //  TLKit
 //
 //  Created by 合众通联 on 2019/1/16.
@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSObject (TimeFormat)
+@interface XBUtilityTool : NSObject
 
-- (NSString *)xb_timeFormatChangeWithOriginISOTime:(NSString *)timeString;
++ (NSString *)xb_timeFormatChangeWithOriginISOTime:(NSString *)timeStr;
 
 @end
 
