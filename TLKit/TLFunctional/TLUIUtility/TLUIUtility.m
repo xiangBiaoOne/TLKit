@@ -18,6 +18,7 @@ static UILabel *hLabel = nil;
 + (void)load
 {
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD setMinimumSize:CGSizeMake(110, 110)];
     [SVProgressHUD setMinimumDismissTimeInterval:1.0f];
     [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeFlat];
