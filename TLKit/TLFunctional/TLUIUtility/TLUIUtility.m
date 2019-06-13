@@ -57,6 +57,8 @@ static UILabel *hLabel = nil;
 
 + (void)showErrorHint:(NSString *)hintText
 {
+    NSCharacterSet *doNotWant = [NSCharacterSet characterSetWithCharactersInString:@"[]{}（#%-*+=_）\\|~(＜＞$%^&*)_+"];
+    hintText = [[hintText componentsSeparatedByCharactersInSet: doNotWant]componentsJoinedByString: @""];
     [SVProgressHUD showErrorWithStatus:hintText];
 }
 
