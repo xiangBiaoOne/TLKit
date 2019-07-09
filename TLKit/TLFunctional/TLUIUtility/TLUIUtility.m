@@ -18,7 +18,7 @@ static UILabel *hLabel = nil;
 + (void)load
 {
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [SVProgressHUD setMinimumSize:CGSizeMake(110, 110)];
     [SVProgressHUD setMinimumDismissTimeInterval:1.0f];
     [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeFlat];
@@ -57,9 +57,11 @@ static UILabel *hLabel = nil;
 
 + (void)showErrorHint:(NSString *)hintText
 {
-    NSCharacterSet *doNotWant = [NSCharacterSet characterSetWithCharactersInString:@"[]{}（#%-*+=_）\\|~(＜＞$%^&*)_+"];
-    hintText = [[hintText componentsSeparatedByCharactersInSet: doNotWant]componentsJoinedByString: @""];
-    [SVProgressHUD showErrorWithStatus:hintText];
+    if (hintText.length >40) {
+        [hintText substringToIndex:40];
+       hintText = [hintText stringByAppendingString:@"..."];
+    }
+    [SVProgressHUD showInfoWithStatus:hintText];
 }
 
 + (void)showInfoHint:(NSString *)hintText
