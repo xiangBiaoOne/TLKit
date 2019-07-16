@@ -57,8 +57,11 @@ static UILabel *hLabel = nil;
 
 + (void)showErrorHint:(NSString *)hintText
 {
-    if (hintText.length >40) {
-        [hintText substringToIndex:40];
+    if ([hintText isEqualToString:@"1"]) {
+        hintText = @"没有查到数据~";
+    }
+    if (hintText.length >20) {
+       hintText = [hintText substringToIndex:20];
        hintText = [hintText stringByAppendingString:@"..."];
     }
     [SVProgressHUD showInfoWithStatus:hintText];
