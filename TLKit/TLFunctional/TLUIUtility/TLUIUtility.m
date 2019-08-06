@@ -60,7 +60,7 @@ static UILabel *hLabel = nil;
     if ([hintText isEqualToString:@"1"]) {
         hintText = @"没有查到数据~";
     }
-    if (hintText.length >20) {
+    if (hintText.length >50) {
        hintText = [hintText substringToIndex:20];
        hintText = [hintText stringByAppendingString:@"..."];
     }
