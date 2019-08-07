@@ -61,7 +61,7 @@ static UILabel *hLabel = nil;
         hintText = @"没有查到数据~";
     }
     if (hintText.length >50) {
-       hintText = [hintText substringToIndex:20];
+       hintText = [hintText substringToIndex:50];
        hintText = [hintText stringByAppendingString:@"..."];
     }
     [SVProgressHUD showInfoWithStatus:hintText];
