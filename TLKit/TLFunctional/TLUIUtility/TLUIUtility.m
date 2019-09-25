@@ -60,11 +60,25 @@ static UILabel *hLabel = nil;
     if ([hintText isEqualToString:@"1"]) {
         hintText = @"没有查到数据~";
     }
-    if (hintText.length >50) {
-       hintText = [hintText substringToIndex:50];
+    if (hintText.length >80) {
+       hintText = [hintText substringToIndex:80];
        hintText = [hintText stringByAppendingString:@"..."];
     }
-    [SVProgressHUD showInfoWithStatus:hintText];
+    if (hintText == nil || hintText.length == 0) {
+        return;
+    }
+    if ([self checkIsChinese:hintText]) {
+        [SVProgressHUD showInfoWithStatus:hintText];
+    }
+}
++ (BOOL)checkIsChinese:(NSString *)string{
+    for (int i=0; i<string.length; i++) {
+        unichar ch = [string characterAtIndex:i];
+        if (0x4E00 <= ch  && ch <= 0x9FA5) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 + (void)showInfoHint:(NSString *)hintText
