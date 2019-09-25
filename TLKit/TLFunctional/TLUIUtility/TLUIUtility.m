@@ -83,7 +83,19 @@ static UILabel *hLabel = nil;
 
 + (void)showInfoHint:(NSString *)hintText
 {
-    [SVProgressHUD showInfoWithStatus:hintText];
+    if ([hintText isEqualToString:@"1"]) {
+        hintText = @"没有查到数据~";
+    }
+    if (hintText.length >80) {
+        hintText = [hintText substringToIndex:80];
+        hintText = [hintText stringByAppendingString:@"..."];
+    }
+    if (hintText == nil || hintText.length == 0) {
+        return;
+    }
+    if ([self checkIsChinese:hintText]) {
+        [SVProgressHUD showInfoWithStatus:hintText];
+    }
 }
 
 + (BOOL)isShowLoading
